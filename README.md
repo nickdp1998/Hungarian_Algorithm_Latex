@@ -1,1 +1,1 @@
-# Hungarian_Algorithm_Latex
+# Hungarian Algorithm Latex
