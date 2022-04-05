@@ -8,8 +8,6 @@ Notes générales
     - Le nom des colonnes du tableau doit être sous la forme : nom1 nom2 nom3 ...
     - Le nom des lignes du tableau doit être sous la forme : nom1 nom2 nom3 ...
     - Voir le commentaire au début du fichier pour un exemple des entrées
-    - Aucune gestion des cases vide dans le tableau
-    - Aucune vérification des dimensions du tableau comparé au noms des lignes et colonnes.
     
 Fonctionnalités à améliorer
 
