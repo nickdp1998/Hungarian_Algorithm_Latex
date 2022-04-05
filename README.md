@@ -10,3 +10,8 @@ Notes générales
     - Voir le commentaire au début du fichier pour un exemple des entrées
     - Aucune gestion des cases vide dans le tableau
     - Aucune vérification des dimensions du tableau comparé au noms des lignes et colonnes.
+    
+Fonctionnalités à améliorer
+
+    - Aucune gestion des cases vide dans le tableau
+    - Aucune vérification des dimensions du tableau comparé au noms des lignes et colonnes.
