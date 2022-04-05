@@ -1,15 +1,24 @@
 """
 
-Argument pour dev :
+    Argument pour l'exemple :
 
-[[65,73,63,57],[67,70,65,58],[68,72,69,55],[67,75,70,59],[71,69,75,57],[69,71,66,59]]
-Dos Brasse Papillon Libre
-Nageur1 Nageur2 Nageur3 Nageur4 Nageur5 Nageur6
+    [[65,73,63,57],[67,70,65,58],[68,72,69,55],[67,75,70,59],[71,69,75,57],[69,71,66,59]]
+    Dos Brasse Papillon Libre
+    Nageur1 Nageur2 Nageur3 Nageur4 Nageur5 Nageur6
 
 """
 
+"""
 
+    Fonction qui écrit le tableau "table" ayant comme nom de colonne "colName" et nom de ligne "lineName" en format 
+    Latex dans le fichier file.
+
+    Les argument lineZero et colZero sont utilisés pour identifier le nombre minimal
+    de ligne pour couvrir tout les zéro (utiliser [] pour afficher un tableau régulier).
+
+"""
 def print_latex(table, colName, lineName, lineZero, colZero, file):
+    #region Début du tableau
     largeur = len(table[0])
     format = "|c|"
     for x in range(largeur):
@@ -18,6 +27,9 @@ def print_latex(table, colName, lineName, lineZero, colZero, file):
     file.write("\\begin{center}\n")
     file.write("\\begin{tabular}{"+format+"}\n")
     file.write("\\hline\n")
+    #endregion
+
+    #region Nom des colonnes
     colNameLatex = ""
     for x in range(len(colName)):
         if x in colZero:
@@ -27,6 +39,9 @@ def print_latex(table, colName, lineName, lineZero, colZero, file):
     colNameLatex = colNameLatex + "\\\\"
     file.write(colNameLatex+"\n")
     file.write("\\hline\n")
+    #endregion
+
+    #region Lignes du tableau
     for x in range(len(lineName)):
         if x in lineZero:
             line = "\\color{red}" + lineName[x]
@@ -40,18 +55,31 @@ def print_latex(table, colName, lineName, lineZero, colZero, file):
         line = line + "\\\\"
         file.write(line+"\n")
         file.write("\\hline\n")
+    #endregion
 
+    #region Fin du tableau
     file.write("\\end{tabular}\n")
     file.write("\\end{center}\n")
+    #endregion
 
-#Main
+"""
+
+    Début du programme
+
+"""
+
+#region Entrées
 tableStr = input("Entrez le tableau sous forme matricielle ([[],[],[],...]) :")
 colNameStr = input("Entrez le nom des colonnes avec des espaces :")
 lineNameStr = input("Entrez le nom des lignes avec des espaces :")
 fileName = input("Entrez le nom du fichier de sortie :")
-file = open("../out/"+fileName,"w",encoding='utf-8')
+#endregion
 
-#Génération de la table
+#region Création du fichier
+file = open("../out/"+fileName,"w",encoding='utf-8')
+#endregion
+
+#region Génération de la table
 tableInter = tableStr.split("],[")
 table = []
 for x in range(len(tableInter)):
@@ -72,11 +100,14 @@ lineName = lineNameStr.split(" ")
 
 largeur = len(table[0])
 hauteur = len(table)
+#endregion
 
+#region Affichage table original
 file.write("Table original :\n")
 print_latex(table, colName, lineName,[],[],file)
+#endregion
 
-#Création de matrice carré
+#region Création de table carré
 dupNum = 1
 while largeur < hauteur:
     for x in range(hauteur):
@@ -94,11 +125,14 @@ while hauteur < largeur:
     lineName.append("Ajout " + str(dupNum))
     dupNum = dupNum + 1
     hauteur = hauteur + 1
+#endregion
 
+#region Affichage table carré
 file.write("Table carré :\n")
 print_latex(table, colName, lineName,[],[],file)
+#endregion
 
-#Soustraction du min des colonnes/lignes
+#region Soustraction du min des colonnes/lignes
 for x in range(hauteur):
     minimum = min(table[x])
     for y in range(largeur):
@@ -113,9 +147,11 @@ for x in range(largeur):
         table[y][x] = table[y][x] - minimum
 
 file.write("Table suite à la soustraction des minimums des lignes et colonnes :\n")
+#endregion
 
-#Nombre minimal de ligne
+#region Itérations
 while True:
+    #region Nombre minimal de lignes/colonnes
     zeroLine = []
     zeroCol = []
     while True:
@@ -178,7 +214,9 @@ while True:
             zeroLine.append(pos)
         else:
             zeroCol.append(pos)
+    #endregion
 
+    #region Affichage du résultat de l'itération
     print_latex(table, colName, lineName, zeroLine, zeroCol,file)
 
     zeroLineStr = ""
@@ -211,7 +249,9 @@ while True:
 
     if zeroLineCol >= hauteur:
         break
+    #endregion
 
+    #region Soustraction de la valeur minimale
     minNonZero = 1000000
     for x in range(hauteur):
         for y in range(largeur):
@@ -236,4 +276,7 @@ while True:
     file.write("La valeur minimal qui n'est pas dans une ligne couvrant un zéro est " + str(minNonZero) + ". On soustrait" +
             " cette valeur à chaque élément du tableau, puis on l'ajoute à chaque élément des lignes couvrant les" +
             " zéros. On obtient :\n")
+    #endregion
+
+#endregion
 
