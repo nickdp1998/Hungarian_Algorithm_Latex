@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05ee87d4-83c4-4cd2-a3fd-b4efb9b22ae2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Algo_hongrois.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algo_hongrois.py" afterDir="false" />
-    </list>
+    <list default="true" id="05ee87d4-83c4-4cd2-a3fd-b4efb9b22ae2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,25 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Algo_hongrois.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-              <folding>
-                <element signature="e#620#644#0" />
-                <element signature="e#864#887#0" />
-                <element signature="e#1218#1243#0" />
-                <element signature="e#1710#1731#0" />
-                <element signature="e#1816#1831#0" />
-                <element signature="e#2116#2143#0" />
-                <element signature="e#2209#2239#0" />
-                <element signature="e#2822#2854#0" />
-                <element signature="e#2963#2994#0" />
-                <element signature="e#3405#3434#0" />
-                <element signature="e#3526#3573#0" />
-                <element signature="e#3996#4014#0" />
-                <element signature="e#4012#4053#0" />
-                <element signature="e#5938#5982#0" />
-                <element signature="e#7420#7462#0" />
-              </folding>
+            <state relative-caret-position="507">
+              <caret line="73" column="66" lean-forward="true" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -165,7 +146,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32943925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32943925" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -178,25 +159,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Algo_hongrois.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding>
-            <element signature="e#620#644#0" />
-            <element signature="e#864#887#0" />
-            <element signature="e#1218#1243#0" />
-            <element signature="e#1710#1731#0" />
-            <element signature="e#1816#1831#0" />
-            <element signature="e#2116#2143#0" />
-            <element signature="e#2209#2239#0" />
-            <element signature="e#2822#2854#0" />
-            <element signature="e#2963#2994#0" />
-            <element signature="e#3405#3434#0" />
-            <element signature="e#3526#3573#0" />
-            <element signature="e#3996#4014#0" />
-            <element signature="e#4012#4053#0" />
-            <element signature="e#5938#5982#0" />
-            <element signature="e#7420#7462#0" />
-          </folding>
+        <state relative-caret-position="507">
+          <caret line="73" column="66" lean-forward="true" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
         </state>
       </provider>
     </entry>
