@@ -1,0 +1,106 @@
+Table original :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&Dos&Brasse&Papillon&Libre\\
+\hline
+Nageur1&65&73&63&57\\
+\hline
+Nageur2&67&70&65&58\\
+\hline
+Nageur3&68&72&69&55\\
+\hline
+Nageur4&67&75&70&59\\
+\hline
+Nageur5&71&69&75&57\\
+\hline
+Nageur6&69&71&66&59\\
+\hline
+\end{tabular}
+\end{center}
+Table carré :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+&Dos&Brasse&Papillon&Libre&Ajout 1&Ajout 2\\
+\hline
+Nageur1&65&73&63&57&0&0\\
+\hline
+Nageur2&67&70&65&58&0&0\\
+\hline
+Nageur3&68&72&69&55&0&0\\
+\hline
+Nageur4&67&75&70&59&0&0\\
+\hline
+Nageur5&71&69&75&57&0&0\\
+\hline
+Nageur6&69&71&66&59&0&0\\
+\hline
+\end{tabular}
+\end{center}
+Table suite à la soustraction des minimums des lignes et colonnes :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+&Dos&Brasse&Papillon&Libre&\color{red}Ajout 1&\color{red}Ajout 2\\
+\hline
+\color{red}Nageur1&\color{red}0&\color{red}4&\color{red}0&\color{red}2&\color{red}0&\color{red}0\\
+\hline
+Nageur2&2&1&2&3&\color{red}0&\color{red}0\\
+\hline
+\color{red}Nageur3&\color{red}3&\color{red}3&\color{red}6&\color{red}0&\color{red}0&\color{red}0\\
+\hline
+Nageur4&2&6&7&4&\color{red}0&\color{red}0\\
+\hline
+\color{red}Nageur5&\color{red}6&\color{red}0&\color{red}12&\color{red}2&\color{red}0&\color{red}0\\
+\hline
+Nageur6&4&2&3&4&\color{red}0&\color{red}0\\
+\hline
+\end{tabular}
+\end{center}
+Les lignes et colonnes nécessaires pour couvrir tous les zéros sont les lignes 0, 4, 2 et les colonnes 4, 5.
+On a seulement 5 lignes et colonnes, donc on doit continuer l'algorithme.
+La valeur minimal qui n'est pas dans une ligne couvrant un zéro est 1. On soustrait cette valeur à chaque élément du tableau, puis on l'ajoute à chaque élément des lignes couvrant les zéros. On obtient :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+&Dos&\color{red}Brasse&Papillon&\color{red}Libre&\color{red}Ajout 1&\color{red}Ajout 2\\
+\hline
+\color{red}Nageur1&\color{red}0&\color{red}4&\color{red}0&\color{red}2&\color{red}1&\color{red}1\\
+\hline
+Nageur2&1&\color{red}0&1&\color{red}2&\color{red}0&\color{red}0\\
+\hline
+Nageur3&3&\color{red}3&6&\color{red}0&\color{red}1&\color{red}1\\
+\hline
+Nageur4&1&\color{red}5&6&\color{red}3&\color{red}0&\color{red}0\\
+\hline
+Nageur5&6&\color{red}0&12&\color{red}2&\color{red}1&\color{red}1\\
+\hline
+Nageur6&3&\color{red}1&2&\color{red}3&\color{red}0&\color{red}0\\
+\hline
+\end{tabular}
+\end{center}
+Les lignes et colonnes nécessaires pour couvrir tous les zéros sont les lignes 0 et les colonnes 3, 1, 4, 5.
+On a seulement 5 lignes et colonnes, donc on doit continuer l'algorithme.
+La valeur minimal qui n'est pas dans une ligne couvrant un zéro est 1. On soustrait cette valeur à chaque élément du tableau, puis on l'ajoute à chaque élément des lignes couvrant les zéros. On obtient :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+&\color{red}Dos&\color{red}Brasse&\color{red}Papillon&\color{red}Libre&\color{red}Ajout 1&\color{red}Ajout 2\\
+\hline
+Nageur1&\color{red}0&\color{red}5&\color{red}0&\color{red}3&\color{red}2&\color{red}2\\
+\hline
+Nageur2&\color{red}0&\color{red}0&\color{red}0&\color{red}2&\color{red}0&\color{red}0\\
+\hline
+Nageur3&\color{red}2&\color{red}3&\color{red}5&\color{red}0&\color{red}1&\color{red}1\\
+\hline
+Nageur4&\color{red}0&\color{red}5&\color{red}5&\color{red}3&\color{red}0&\color{red}0\\
+\hline
+Nageur5&\color{red}5&\color{red}0&\color{red}11&\color{red}2&\color{red}1&\color{red}1\\
+\hline
+Nageur6&\color{red}2&\color{red}1&\color{red}1&\color{red}3&\color{red}0&\color{red}0\\
+\hline
+\end{tabular}
+\end{center}
+Les colonnes nécessaires pour couvrir tous les zéros sont les colonnes 3, 1, 0, 2, 4, 5.
+On a bien qu'il faut au moins 6 lignes et colonnes pour couvrir tous les zéros. On peut donc trouver une affectation de coût 0.
